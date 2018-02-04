@@ -38,14 +38,13 @@ public class AutonomousCommand extends Command {
     // Called just before this Command runs the first time
     @Override
     protected void initialize() {
-    	Robot.driveTrain.changeMode(true);
-    	setTimeout(3500);
+    	setTimeout(3.5);
     }
 
     // Called repeatedly when this Command is scheduled to run
     @Override
     protected void execute() {
-    	Robot.driveTrain.tankDrive(0, 1);
+    	Robot.driveTrain.arcadeDrive(1, 0);
     }
 
     // Make this return true when this Command no longer needs to run execute()
@@ -57,7 +56,7 @@ public class AutonomousCommand extends Command {
     // Called once after isFinished returns true
     @Override
     protected void end() {
-    	Robot.driveTrain.changeMode(false);
+    	System.out.println("End has been called");
     	Robot.driveTrain.stop();
     }
 

@@ -49,7 +49,15 @@ public class DriveTrainSubsystem extends Subsystem {
     }
     
     public void tankDrive(Joystick joystick) {
-    	getRobotDrive().tankDrive(joystick.getY(), joystick.getRawAxis(3));
+    	getRobotDrive().tankDrive(-joystick.getY(), -joystick.getRawAxis(3));
+    }
+    
+    public void arcadeDrive(Joystick joystick ) {
+    	getRobotDrive().arcadeDrive(-joystick.getY(), -joystick.getZ());
+    }
+    
+    public void arcadeDrive(double mag, double turn ) {
+    	getRobotDrive().arcadeDrive(-mag, -turn);
     }
     
     public void tankDrive(double x, double y) {

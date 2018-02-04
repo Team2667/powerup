@@ -43,10 +43,20 @@ public class CubeLeft extends Command {
     // Called just before this Command runs the first time
     @Override
     protected void initialize() {
-    	gameData = DriverStation.getInstance().getGameSpecificMessage();
-    	if (gameData.charAt(0) == L)
-    		isClose = true;
-    	else isClose = false;
+    	try {
+    		System.out.println("Cube Left is running");
+        	//gameData = DriverStation.getInstance().getGameSpecificMessage();
+        	System.out.println("stephen is strongboi");
+        	/* if (gameData.charAt(0) == L)
+        		isClose = true;
+        	else isClose = false; */
+        	//System.out.println(Robot.gameData);
+    	} catch (Exception e) {
+    		e.printStackTrace();
+    	} finally {
+    		System.out.println("Dropped through");
+    	}
+    	
     }
 
     // Called repeatedly when this Command is scheduled to run
@@ -57,17 +67,20 @@ public class CubeLeft extends Command {
     // Make this return true when this Command no longer needs to run execute()
     @Override
     protected boolean isFinished() {
-        return false;
+        return true;
     }
 
     // Called once after isFinished returns true
     @Override
     protected void end() {
+    	System.out.println("End was called");
+    	//System.out.println(gameData);
     }
 
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
     @Override
     protected void interrupted() {
+    	end();
     }
 }
