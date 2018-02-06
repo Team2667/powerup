@@ -29,7 +29,8 @@ import org.usfirst.frc2667.PowerUp.subsystems.*;
  * the project.
  */
 public class Robot extends TimedRobot {
-
+	
+	private static String gameData;
     Command cubeLeft;
     Command cubeRight;
     SendableChooser chooser = new SendableChooser();
@@ -72,6 +73,14 @@ public class Robot extends TimedRobot {
         SmartDashboard.putData("AUTO MODE CHOOSER:", chooser);
         
     }
+    
+    public static void setFMSData(String data) {
+    	gameData = data;
+    }
+    
+    public static String getFMSData() {
+    	return gameData;
+    }
 
     /**
      * This function is called when the disabled button is hit.
@@ -89,10 +98,11 @@ public class Robot extends TimedRobot {
 
     @Override
     public void autonomousInit() {
-    	String gameData;
-		gameData = DriverStation.getInstance().getGameSpecificMessage();
-		System.out.println(gameData);
-		if(gameData.charAt(0) == 'L')
+    	String data;
+		data = DriverStation.getInstance().getGameSpecificMessage();
+		setFMSData(data);
+		System.out.println(getFMSData());
+		if(getFMSData().charAt(0) == 'L')
 		{
 			//Put left auto code here
 		} else {
