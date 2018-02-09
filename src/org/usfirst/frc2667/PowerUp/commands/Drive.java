@@ -46,7 +46,6 @@ public class Drive extends Command {
     // Called repeatedly when this Command is scheduled to run
     @Override
     protected void execute() {
-    	//Robot.driveTrain.tankDrive(joystick);
     	Robot.driveTrain.arcadeDrive(joystick);
     }
 
