@@ -63,7 +63,7 @@ public class CubeGrab extends Subsystem {
     }
     
     public boolean getUpperSwitch() {
-    	return lowerUpperSwitch.get();
+    	return upperLimitSwitch.get();
     }
 
     @Override
