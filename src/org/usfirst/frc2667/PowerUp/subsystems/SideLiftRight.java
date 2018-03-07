@@ -48,6 +48,14 @@ public class SideLiftRight extends Subsystem {
     	sideDropRight.setPosition(.5);
     }
     
+    public void drop(double pos) {
+    	sideDropRight.setPosition(pos);
+    }
+    
+    public double getDropServo() {
+    	return sideDropRight.get();
+    }
+    
     //Is this too slow?
     public void lift() {
     	sideLiftRight.set(1);

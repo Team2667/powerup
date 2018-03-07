@@ -82,8 +82,7 @@ public class DriveTrain extends Subsystem {
     }
     
     public double getDistanceSensor() {
-    	return 0;
-    	//return AnalogInput.getValue();
+    	return distanceSensor.getVoltage() / 0.009766;
     }
     
 

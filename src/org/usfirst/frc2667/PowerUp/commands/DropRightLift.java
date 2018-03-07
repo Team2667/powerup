@@ -1,4 +1,5 @@
 package org.usfirst.frc2667.PowerUp.commands;
+import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.command.Command;
 import org.usfirst.frc2667.PowerUp.Robot;
 
@@ -27,11 +28,14 @@ public class DropRightLift extends Command {
     // Called just before this Command runs the first time
     @Override
     protected void initialize() {
-    	setTimeout(1);
+    	setTimeout(.5);
     	Robot.sideLiftRight.drop();
     }
 
     // Called repeatedly when this Command is scheduled to run
+    /* (non-Javadoc)
+     * @see edu.wpi.first.wpilibj.command.Command#execute()
+     */
     @Override
     protected void execute() {
     }
@@ -39,7 +43,7 @@ public class DropRightLift extends Command {
     // Make this return true when this Command no longer needs to run execute()
     @Override
     protected boolean isFinished() {
-        return isTimedOut();
+    	return isTimedOut();
     }
 
     // Called once after isFinished returns true
