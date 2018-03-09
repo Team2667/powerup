@@ -7,6 +7,7 @@ distance sensor: analog 1
 
 cube grabber: spark/PWM 4
 cube lift: spark/PWM 5
+lift spinner : spark/PWM 6
 
 side lift left: spark/PWN 0
 side lift right: spark/PWM 1
