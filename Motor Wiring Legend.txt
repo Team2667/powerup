@@ -1,0 +1,15 @@
+Drive Train left front: talon/CAN 1
+Drive train left rear: talon/CAN 2
+drive train right front: talon/CAN 3
+drive train right rear: talon/CAN 4
+
+distance sensor: analog 1
+
+cube grabber: spark/PWM 4
+cube lift: spark/PWM 5
+
+side lift left: spark/PWN 0
+side lift right: spark/PWM 1
+lift left drop: servo/PWM 2
+lift right drop: servo/PWM 3
+

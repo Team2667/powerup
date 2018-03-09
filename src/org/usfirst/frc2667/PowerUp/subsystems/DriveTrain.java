@@ -82,7 +82,7 @@ public class DriveTrain extends Subsystem {
     }
     
     public double getDistanceSensor() {
-    	return distanceSensor.getVoltage() / 0.009766;
+    	return distanceSensor.getVoltage() / 0.009766; // When we find out how it will be mounted, subtract the distance from the front bumper from the result
     }
     
 

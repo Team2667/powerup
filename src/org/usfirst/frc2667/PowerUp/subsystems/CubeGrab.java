@@ -55,11 +55,11 @@ public class CubeGrab extends Subsystem {
     }
     
     public void lift() {
-    	liftWindow.set(1);
+    	liftWindow.set(.5);
     }
     
     public void drop() {
-    	liftWindow.set(-1);
+    	liftWindow.set(-.5);
     }
     
     public double getLift() {

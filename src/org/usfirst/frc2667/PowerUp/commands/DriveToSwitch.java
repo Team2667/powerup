@@ -16,7 +16,7 @@ public class DriveToSwitch extends Command {
 	}
 	
 	protected boolean isFinished() {
-		return (Robot.driveTrain.getDistanceSensor() <= 2 && !(Robot.driveTrain.getDistanceSensor() == 0));
+		return (Robot.driveTrain.getDistanceSensor() <= 2 && !(Robot.driveTrain.getDistanceSensor() <= 0));
 	}
 	
 	protected void interrupted() {
